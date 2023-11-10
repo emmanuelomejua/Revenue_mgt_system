@@ -1,6 +1,6 @@
 import './topbar.scss'
 
-const Topbar = () => {
+const Topbar = ():string | any => {
   return (
     <nav className='navbar'>
       <section>

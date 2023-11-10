@@ -1,10 +1,20 @@
-import React from 'react'
+import './home.scss'
+import Widget from '../../comps/widget/Widget'
 
 const Home = () => {
   return (
-    <div>
-      Home
-    </div>
+    <main className='home'>
+      <section className='home__cont'>
+        <section>
+        <Widget/>
+        <Widget/>
+        <Widget/>
+        <Widget/>
+        <Widget/>
+        {/* <Widget/> */}
+        </section>
+      </section>
+    </main>
   )
 }
 

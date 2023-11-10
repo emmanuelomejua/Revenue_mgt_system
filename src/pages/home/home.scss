@@ -1,0 +1,19 @@
+.home{
+    height: calc(100vh - 70px);
+
+    .home__cont{
+        display: flex;
+        padding: 10px;
+
+        section{
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+            gap: 20px;
+        }
+    }
+}

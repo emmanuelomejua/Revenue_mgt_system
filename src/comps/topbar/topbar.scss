@@ -4,10 +4,23 @@
 
     section{
         display: flex;
-        justify-content: space-between;
         align-items: center;
         margin: 10px;
 
+        .navbar__first{
+            flex: 1;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+
+        .navbar__last{
+            flex: 4;
+            display: flex;
+            justify-content: space-between;
+
+        }
         div{
             display: flex;
             gap: 10px;
@@ -23,8 +36,8 @@
             }
 
             .span{
-                margin-left: 100px;
                 font-size: 28px;
+                color: #001D3D;
             }
         }
     }

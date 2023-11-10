@@ -4,14 +4,18 @@ const Topbar = () => {
   return (
     <nav className='navbar'>
       <section>
-        <div className="">
+        <div className="navbar__first">
             <img src='naija.png' alt=''/>
             <img src='ifadore.png' alt=''/>
-            <span className='span'>Overview</span>
         </div>
-        <div className="">
-          <img src='pic1.jpg' alt=''/>
-          <span>Ayodele Ayodeji</span>
+
+        <div className="navbar__last">
+          <span className='span'>Overview</span>
+
+          <div>
+            <img src='pic1.jpg' alt=''/>
+            <span>Ayodele Ayodeji</span>
+          </div>
         </div>
       </section>
     </nav>

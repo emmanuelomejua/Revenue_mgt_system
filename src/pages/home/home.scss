@@ -3,6 +3,7 @@
 
     .home__cont{
         display: flex;
+        flex-direction: column;
         padding: 10px;
 
         section{
@@ -14,6 +15,10 @@
             align-items: center;
             margin: 15px;
             gap: 20px;
+        }
+
+        div{
+            display: flex;
         }
     }
 }

@@ -1,18 +1,23 @@
 import './home.scss'
 import Widget from '../../comps/widget/Widget'
+import Piechart from '../../comps/piechart/Piechart'
+import Chart from '../../comps/chart/Chart'
 
-const Home = () => {
+const Home = ({type}:any) => {
   return (
     <main className='home'>
       <section className='home__cont'>
         <section>
-        <Widget/>
-        <Widget/>
-        <Widget/>
-        <Widget/>
-        <Widget/>
-        {/* <Widget/> */}
+        <Widget type='polltax'/>
+        <Widget type='licence'/>
+        <Widget type='yesterday'/>
+        <Widget type='month'/>
+        <Widget type='total'/>
         </section>
+        <div>
+          <Chart/>
+          <Piechart/>
+        </div>
       </section>
     </main>
   )

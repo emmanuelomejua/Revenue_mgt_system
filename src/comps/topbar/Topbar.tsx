@@ -1,10 +1,20 @@
-import React from 'react'
+import './topbar.scss'
 
 const Topbar = () => {
   return (
-    <div>
-      Tobar
-    </div>
+    <nav className='navbar'>
+      <section>
+        <div className="">
+            <img src='naija.png' alt=''/>
+            <img src='ifadore.png' alt=''/>
+            <span className='span'>Overview</span>
+        </div>
+        <div className="">
+          <img src='pic1.jpg' alt=''/>
+          <span>Ayodele Ayodeji</span>
+        </div>
+      </section>
+    </nav>
   )
 }
 

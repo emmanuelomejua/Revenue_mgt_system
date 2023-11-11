@@ -1,4 +1,4 @@
-import { Dashboard, ProductionQuantityLimits, ExitToApp } from '@mui/icons-material'
+import { Dashboard, InsertChartOutlinedOutlined, ExitToApp, BarChartOutlined, StackedLineChartOutlined, CheckCircleOutline, Contrast, FilterHdr, Recycling } from '@mui/icons-material'
 import './sidebar.scss'
 import { Link } from 'react-router-dom'
 
@@ -12,37 +12,37 @@ const lists = [
     {
         title: 'Poll Tax',
         url: '/polltax',
-        icon: <ProductionQuantityLimits/>
+        icon: <BarChartOutlined/>
     },
     {
         title: 'Non-Revenue',
         url: '/nonrevenue',
-        icon: <Dashboard/>
+        icon: <InsertChartOutlinedOutlined/>
     },
     {
         title: 'Licence',
         url: '/licence',
-        icon: <Dashboard/>
+        icon: <CheckCircleOutline/>
     },
     {
         title: 'Earnings',
         url: '/earnings',
-        icon: <Dashboard/>
+        icon: <StackedLineChartOutlined/>
     },
     {
         title: 'Rent',
         url: '/rents',
-        icon: <Dashboard/>
+        icon: <Contrast/>
     },
     {
         title: 'Fees',
         url: '/fees',
-        icon: <Dashboard/>
+        icon: <FilterHdr/>
     },
     {
         title: 'Others',
         url: '/others',
-        icon: <Dashboard/>
+        icon: <Recycling/>
     },
 
 ]

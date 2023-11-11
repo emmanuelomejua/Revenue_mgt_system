@@ -1,5 +1,5 @@
 import './widget.scss'
-import { ChatBubble, ApprovalOutlined } from '@mui/icons-material'
+import { ChatBubble, ApprovalOutlined, BarChartOutlined, CheckCircleOutline, Repartition } from '@mui/icons-material'
 
 
 
@@ -10,28 +10,28 @@ const Widget = ({type}: any) => {
     case 'polltax':
       details = {
         title: 'Poll Tax',
-        icon: <ChatBubble style={{color: 'orange'}}/>,
+        icon: <BarChartOutlined style={{color: 'orange'}}/>,
         amount: 10000
       }
      break;
     case 'yesterday':
       details = {
         title: 'Yesterday',
-        icon: <ApprovalOutlined style={{color: 'yellow'}}/>,
+        icon: <ApprovalOutlined style={{color: 'green'}}/>,
         amount: 12000
       }
      break;
     case 'licence':
       details = {
         title: 'Total licence',
-        icon: <ChatBubble style={{color: 'green'}}/>,
+        icon: <CheckCircleOutline style={{color: 'yellow'}}/>,
         amount: 31000
       }
      break;
     case 'month':
       details = {
         title: 'Last month',
-        icon: <ChatBubble style={{color: 'purple'}}/>,
+        icon: <Repartition style={{color: 'purple'}}/>,
         amount: 62000
       }
      break;

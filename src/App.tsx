@@ -4,6 +4,7 @@ import Topbar from './comps/topbar/Topbar';
 import Sidebar from './comps/sidebar/Sidebar';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
+import Polltask from './pages/polltask/Polltask';
 
 function App() {
 
@@ -32,7 +33,19 @@ function App() {
           {
             path: '/',
             element:  <Home/>
-          }
+          },
+          {
+            path: '/polltax',
+            element:  <Polltask/>
+          },
+          {
+            path: '/nonrevenue',
+            element:  <Home/>
+          },
+          {
+            path: '/licence',
+            element:  <Home/>
+          },
         ]
       },
       {

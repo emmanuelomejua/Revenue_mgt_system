@@ -4,7 +4,7 @@ import { ChatBubble, ApprovalOutlined, BarChartOutlined, CheckCircleOutline, Rep
 
 
 const Widget = ({type}: any) => {
-  let details: string | number | any;
+  let details: any;
   
   switch(type){
     case 'polltax':
@@ -23,7 +23,7 @@ const Widget = ({type}: any) => {
      break;
     case 'licence':
       details = {
-        title: 'Total licence',
+        title: 'Licence',
         icon: <CheckCircleOutline style={{color: 'yellow'}}/>,
         amount: 31000
       }

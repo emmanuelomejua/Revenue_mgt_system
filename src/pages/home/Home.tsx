@@ -3,7 +3,7 @@ import Widget from '../../comps/widget/Widget'
 import Piechart from '../../comps/piechart/Piechart'
 import Chart from '../../comps/chart/Chart'
 
-const Home = () => {
+const Home = (): any=> {
   return (
     <main className='home'>
       <section className='home__cont'>

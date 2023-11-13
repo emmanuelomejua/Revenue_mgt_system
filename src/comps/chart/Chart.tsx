@@ -83,7 +83,7 @@ const Chart = (): any => {
        <section className='chart'>
           <ResponsiveContainer width={500} height={400}>
           <AreaChart
-            width={500}
+            width={450}
             height={400}
             data={data}
             margin={{

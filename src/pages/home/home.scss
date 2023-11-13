@@ -23,3 +23,16 @@
         }
     }
 }
+
+
+@media screen and (max-width: 760px) {
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    div{
+        flex-direction: column;
+    }
+}

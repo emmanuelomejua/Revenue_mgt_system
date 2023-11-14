@@ -29,8 +29,17 @@ const Topbar = (): any => {
 
       <section className='section_menu'>
         <section className='section_menu_cont'>
-          <img src="ifadore.png" alt="" />
-          <Menu className='icon'/>
+         {!menu ? <img src="ifadore.png" alt="" />: ''}
+          <div className="">
+
+            {!menu ? <Menu className='icon' onClick={()=> setMenu(true)}/> : ''}
+
+          {menu &&
+            <div className="hamuburg">
+              <Close onClick={()=>setMenu(false)} className='icon2'/>
+              <Menu1/>
+            </div>}
+          </div>
         </section>
       </section>
     </nav>

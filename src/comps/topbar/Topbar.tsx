@@ -1,6 +1,13 @@
 import './topbar.scss'
+import {useState} from 'react'
+import {Close, Menu} from '@mui/icons-material'
+import Menu1 from './Menu'
+
 
 const Topbar = (): any => {
+
+  const [menu, setMenu] = useState(false)
+
   return (
     <nav className='navbar'>
       <section>
@@ -19,11 +26,9 @@ const Topbar = (): any => {
         </div>
       </section>
 
-      <section className='section_menu'>
-         <div className="section_menu_cont">
-          <img src="ifadore.png" alt=""/>
-          <span>ICON</span>
-         </div>
+
+      <section className=''>
+
       </section>
     </nav>
   )

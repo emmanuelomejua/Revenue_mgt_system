@@ -81,21 +81,11 @@ const Chart = (): any => {
   return (
 
        <section className='chart'>
-          <ResponsiveContainer width={500} height={400}>
-          <AreaChart
-            width={450}
-            height={400}
-            data={data}
-            margin={{
-              top: 10,
-              right: 30,
-              left: 0,
-              bottom: 0,
-            }}
-          >
+          <ResponsiveContainer width={400} aspect={2 / 1}>
+          <AreaChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="month" />
-            {/* <YAxis /> */}
+
             <Tooltip />
             <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#1f17b1" />
             <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />

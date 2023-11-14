@@ -2,8 +2,7 @@ import './widget.scss'
 import { ChatBubble, ApprovalOutlined, BarChartOutlined, CheckCircleOutline, Repartition } from '@mui/icons-material'
 
 
-
-const Widget = ({type}: any) => {
+const Widget = ({type}: any)=> {
   let details: any;
   
   switch(type){

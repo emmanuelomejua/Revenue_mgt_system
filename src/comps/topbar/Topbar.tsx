@@ -1,6 +1,6 @@
 import './topbar.scss'
 
-const Topbar = ():string | any => {
+const Topbar = (): any => {
   return (
     <nav className='navbar'>
       <section>
@@ -17,6 +17,10 @@ const Topbar = ():string | any => {
             <span>Ayodele Ayodeji</span>
           </div>
         </div>
+      </section>
+
+      <section className='section_menu'>
+         
       </section>
     </nav>
   )

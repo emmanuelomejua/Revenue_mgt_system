@@ -20,7 +20,10 @@ const Topbar = (): any => {
       </section>
 
       <section className='section_menu'>
-         
+         <div className="section_menu_cont">
+          <img src="ifadore.png" alt=""/>
+          <span>ICON</span>
+         </div>
       </section>
     </nav>
   )

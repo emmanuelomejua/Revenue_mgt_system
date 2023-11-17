@@ -1,67 +1,63 @@
 import './table.scss'
 import Box from '@mui/material/Box';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 90 },
   {
-    field: 'firstName',
-    headerName: 'First name',
+    field: 'title',
+    headerName: 'Title',
+    width: 140,
+    editable: true,
+  },
+  {
+    field: 'amount',
+    headerName: 'Amount',
+    width: 90,
+    editable: true,
+  },
+  {
+    field: 'phone',
+    headerName: 'Phone',
+    width: 140,
+    editable: true,
+  },
+  {
+    field: 'name',
+    headerName: 'Name',
     width: 150,
     editable: true,
-  },
-  {
-    field: 'lastName',
-    headerName: 'Last name',
-    width: 150,
-    editable: true,
-  },
-  {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 110,
-    editable: true,
-  },
-  {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
   },
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 10, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 11, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 12, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 13, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 14, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 15, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 16, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 17, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 18, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 19, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 20, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 21, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 22, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-  { id: 23, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  { id: 1, title: 'Snow', amount: 2300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 2, title: 'Lannister', amount: 2300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 3, title: 'Lannister', amount: 2300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 4, title: 'Stark', amount: 2300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 5, title: 'Targaryen', amount: 2300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 6, title: 'Melisandre', amount: 2500, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 7, title: 'Clifford', amount: 12990, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 8, title: 'Frances', amount: 1200, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 10, title: 'Roxie', amount: 1200, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 11, title: 'Roxie', amount: 1200, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 12, title: 'Roxie', amount: 1200, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 13, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 14, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji'},
+  { id: 15, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 16, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 17, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 18, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 19, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 20, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 21, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 22, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
+  { id: 23, title: 'Roxie', amount: 1300, address: '2 Millenium Road', phone: '090117585939', name: 'Ayodeji' },
 ];
 
 export default function DataGridDemo() {
   return (
-    <Box sx={{ height: 550, width: '100%' }}>
+    <Box sx={{ height: 550, width: 'max-content' }}>
       <DataGrid
         rows={rows}
         columns={columns}

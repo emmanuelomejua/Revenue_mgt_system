@@ -5,6 +5,7 @@ import Sidebar from './comps/sidebar/Sidebar';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Polltask from './pages/polltask/Polltask';
+import Licence from './pages/polltask/Licence';
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
           },
           {
             path: '/licence',
-            element:  <Home/>
+            element:  <Licence/>
           },
         ]
       },

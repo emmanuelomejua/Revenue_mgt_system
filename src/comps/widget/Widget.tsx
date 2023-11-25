@@ -1,50 +1,60 @@
 import './widget.scss'
+import { FC } from 'react'
 import { ChatBubble, ApprovalOutlined, BarChartOutlined, CheckCircleOutline, Repartition } from '@mui/icons-material'
 
+interface WidgetDetails {
+  title: string;
+  icon: React.ReactElement;
+  amount: number;
+}
 
-const Widget = ({type}: any)=> {
-  let details: any;
+interface WidgetProps {
+  type: 'polltax' | 'yesterday' | 'licence' | 'month' | 'total';
+}
+
+
+const Widget: FC<WidgetProps> = ({type})=> {
   
-  switch(type){
-    case 'polltax':
-      details = {
+  const getWidgetDetails = (): WidgetDetails => {
+
+    switch(type){
+      case 'polltax':
+        return {
         title: 'Poll Tax',
         icon: <BarChartOutlined style={{color: 'orange'}}/>,
         amount: 10000
-      }
-     break;
+      };
     case 'yesterday':
-      details = {
+      return {
         title: 'Yesterday',
         icon: <ApprovalOutlined style={{color: 'green'}}/>,
         amount: 12000
-      }
-     break;
-    case 'licence':
-      details = {
+      };
+     case 'licence':
+      return {
         title: 'Licence',
         icon: <CheckCircleOutline style={{color: 'yellow'}}/>,
         amount: 31000
-      }
-     break;
-    case 'month':
-      details = {
-        title: 'Last month',
-        icon: <Repartition style={{color: 'purple'}}/>,
-        amount: 62000
-      }
-     break;
-    case 'total':
-      details = {
-        title: 'Grand Total',
-        icon: <ChatBubble style={{color: '#256'}}/>,
-        amount: 132000
-      }
-     break;
-    
-    default:
-      break;
-  }
+      };
+     case 'month':
+       return {
+         title: 'Last month',
+         icon: <Repartition style={{color: 'purple'}}/>,
+         amount: 62000
+        }
+        case 'total':
+          return {
+            title: 'Grand Total',
+            icon: <ChatBubble style={{color: '#256'}}/>,
+            amount: 132000
+          }
+          
+          default:
+            throw new Error('Invalid widget type');
+          }
+        }
+  
+        const details: WidgetDetails = getWidgetDetails();
 
 
   return (

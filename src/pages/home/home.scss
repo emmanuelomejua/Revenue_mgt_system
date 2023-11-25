@@ -28,9 +28,10 @@
 
 
 @media screen and (max-width: 760px) {
-    section{
-        display: flex;
-        flex-wrap: wrap;
+    .home__cont{
+        div{
+            margin-left: 0;
+        }
 
     }
 

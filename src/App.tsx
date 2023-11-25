@@ -4,8 +4,8 @@ import Topbar from './comps/topbar/Topbar';
 import Sidebar from './comps/sidebar/Sidebar';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
-import Polltask from './pages/polltask/Polltask';
-import Licence from './pages/polltask/Licence';
+import { Polltask, Lincence } from './pages/revenues/index';
+
 
 function App() {
 
@@ -45,7 +45,7 @@ function App() {
           },
           {
             path: '/licence',
-            element:  <Licence/>
+            element:  <Lincence/>
           },
         ]
       },

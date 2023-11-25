@@ -1,9 +1,18 @@
+import React, { FC } from 'react';
 import { Dashboard, InsertChartOutlinedOutlined, ExitToApp, BarChartOutlined, StackedLineChartOutlined, CheckCircleOutline, Contrast, FilterHdr, Recycling } from '@mui/icons-material'
 import './sidebar.scss'
 import { Link } from 'react-router-dom'
 
 
-const lists = [
+interface SidebarItem {
+    id: number;
+    title: string;
+    url: string;
+    icon: React.ReactElement;
+  }
+
+
+const lists: SidebarItem[] = [
     {
         id: 0,
         title: 'Home',
@@ -55,7 +64,7 @@ const lists = [
 
 ]
 
-const Sidebar = ():any => {
+const Sidebar: FC = () => {
   return (
     <section className='sidebar'>
         <ul>

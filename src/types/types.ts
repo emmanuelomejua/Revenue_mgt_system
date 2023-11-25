@@ -1,3 +1,5 @@
+
+
 export interface inputProps {
     id: number,
     title: string,
@@ -8,13 +10,8 @@ export interface inputProps {
 }
 
 
-export interface chartProps {
-    amt: number,
-    month: string
-}
-
-export interface detailsProps {
-    title: string,
-    icon: any,
-    amount: number
+export interface linkItems {
+    id: number,
+    name: string,
+    url: string
 }

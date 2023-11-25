@@ -1,14 +1,62 @@
+import { FC } from 'react';
 import './topbar.scss'
 import {useState} from 'react'
 import {Close, Menu} from '@mui/icons-material'
-import Menu1 from './Menu'
+import { linkItems } from '../../types/types'
+import { Link } from 'react-router-dom';
 
 
-const Topbar = (): any => {
+
+const links:linkItems[] = [
+  {
+    id: 0,
+    name: 'Home',
+    url: '/'
+  },
+  {
+    id: 1,
+    name: 'Poll Tax',
+    url: '/polltax'
+  },
+  {
+    id: 2,
+    name: 'Non-Revenue',
+    url: '/nonrevenue'
+  },
+  {
+    id: 3,
+    name: 'Licence',
+    url: '/licence'
+  },
+  {
+    id: 4,
+    name: 'Earnings',
+    url: '/earnings'
+  },
+  {
+    id: 5,
+    name: 'Rent',
+    url: '/rents'
+  },
+  {
+    id: 6,
+    name: 'Fees',
+    url: '/fees'
+  },
+  {
+    id: 7,
+    name: 'Others',
+    url: '/others'
+  }
+]
+
+
+const Topbar: FC = () => {
 
   const [menu, setMenu] = useState(false)
 
   return (
+    <>
     <nav className='navbar'>
       <section>
         <div className="navbar__first">
@@ -27,22 +75,31 @@ const Topbar = (): any => {
       </section>
 
 
-      <section className='section_menu'>
-        <section className='section_menu_cont'>
-         {!menu ? <img src="ifadore.png" alt="" />: ''}
-          <div className="">
-
-            {!menu ? <Menu className='icon' onClick={()=> setMenu(true)}/> : ''}
-
-          {menu &&
-            <div className="hamuburg">
-              <Close onClick={()=>setMenu(false)} className='icon2'/>
-              <Menu1/>
-            </div>}
-          </div>
-        </section>
-      </section>
     </nav>
+      <section className='menu'>
+        <div className="menu_sec">
+        <img src='ifadore.png' alt=''/>
+        <span>
+          {
+            !menu ?
+            <Menu onClick={()=>setMenu(true)}/>
+            : <Close onClick={()=>setMenu(false)}/>
+          }
+        </span>
+        </div>
+
+        {
+          menu &&
+        <div className="menu_cont">
+            {links.map((link) => (
+              <Link to={link.url} key={link.id} className='link span'>
+                <span>{link.name}</span>
+              </Link>
+            ))}
+        </div>
+        }
+      </section>
+    </>
   )
 }
 

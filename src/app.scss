@@ -1,14 +1,13 @@
 .app{
     max-width: 1200px;
     margin: 0 auto;
-    height:  calc(100vh - 60px);
+    height:  calc(100vh - 70px);
     display: flex;
     flex-direction: column;
 }
 
 .app_cont{
     display: flex;
-    height: calc(100vh - 500px);
     background-color: #fff;
 }
 

@@ -1,7 +1,7 @@
 import Table from '../../comps/table/Table'
-import React from 'react'
+import { FC } from 'react'
 
-const Licence = () => {
+const Licence:FC = () => {
   return (
     <div>
         <Table/>

@@ -1,6 +1,5 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import './topbar.scss'
-import {useState} from 'react'
 import {Close, Menu} from '@mui/icons-material'
 import { linkItems } from '../../types/types'
 import { Link } from 'react-router-dom';
@@ -53,7 +52,22 @@ const links:linkItems[] = [
 
 const Topbar: FC = () => {
 
-  const [menu, setMenu] = useState(false)
+  const [menu, setMenu] = useState(false);
+
+
+
+  useEffect(() => {
+
+    const handleWindowLoad = () => {
+
+      setMenu(false);
+    };
+
+    window.addEventListener('load', handleWindowLoad);
+    return () => {
+      window.removeEventListener('load', handleWindowLoad);
+    };
+  }, []);
 
   return (
     <>

@@ -2,8 +2,9 @@ import './home.scss'
 import Widget from '../../comps/widget/Widget'
 import Piechart from '../../comps/piechart/Piechart'
 import Chart from '../../comps/chart/Chart'
+import { FC } from 'react'
 
-const Home = (): any=> {
+const Home:FC = ()=> {
   return (
     <main className='home'>
       <section className='home__cont'>

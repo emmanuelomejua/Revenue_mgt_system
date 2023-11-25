@@ -4,7 +4,7 @@ import './sidebar.scss'
 import { Link } from 'react-router-dom'
 
 
-interface SidebarItem {
+interface SidebarItems {
     id: number;
     title: string;
     url: string;
@@ -12,7 +12,7 @@ interface SidebarItem {
   }
 
 
-const lists: SidebarItem[] = [
+const lists: SidebarItems[] = [
     {
         id: 0,
         title: 'Home',

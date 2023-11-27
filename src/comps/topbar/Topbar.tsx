@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState } from 'react';
 import './topbar.scss'
 import {Close, Menu} from '@mui/icons-material'
 import { linkItems } from '../../types/types'
@@ -55,20 +55,6 @@ const Topbar: FC = () => {
   const [menu, setMenu] = useState(false);
 
 
-
-  useEffect(() => {
-
-    const handleWindowLoad = () => {
-
-      setMenu(false);
-    };
-
-    window.addEventListener('load', handleWindowLoad);
-    return () => {
-      window.removeEventListener('load', handleWindowLoad);
-    };
-  }, []);
-
   return (
     <>
     <nav className='navbar'>
@@ -106,7 +92,7 @@ const Topbar: FC = () => {
           menu &&
         <div className="menu_cont">
             {links.map((link) => (
-              <Link to={link.url} key={link.id} className='link span'>
+              <Link to={link.url} key={link.id} className='link span' onClick={()=>setMenu(false)}>
                 <span>{link.name}</span>
               </Link>
             ))}

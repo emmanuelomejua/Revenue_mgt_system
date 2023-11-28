@@ -90,7 +90,7 @@ const Topbar: FC = () => {
 
         {
           menu &&
-        <div className="menu_cont">
+        <div className="menu_cont scale-up-center">
             {links.map((link) => (
               <Link to={link.url} key={link.id} className='link span' onClick={()=>setMenu(false)}>
                 <span>{link.name}</span>

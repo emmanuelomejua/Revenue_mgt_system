@@ -3,9 +3,8 @@ import { FC } from 'react'
 
 const Licence:FC = () => {
   return (
-    <div>
         <Table/>
-    </div>
+
   )
 }
 

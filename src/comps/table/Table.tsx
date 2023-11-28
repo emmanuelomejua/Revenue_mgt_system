@@ -34,7 +34,7 @@ const columns: GridColDef[] = [
 
 export default function DataGridDemo() {
   return (
-    <Box sx={{ height: 550, width: 'max-content' }}>
+    <Box sx={{ height: 'max-content', width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}

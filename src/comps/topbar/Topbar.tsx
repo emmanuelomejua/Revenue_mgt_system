@@ -82,15 +82,15 @@ const Topbar: FC = () => {
         <span>
           {
             !menu ?
-            <Menu onClick={()=>setMenu(true)}/>
-            : <Close onClick={()=>setMenu(false)}/>
+            <Menu onClick={()=>setMenu(true)} className='slide-bottom'/>
+            : <Close onClick={()=>setMenu(false)} className='slide-bottom'/>
           }
         </span>
         </div>
 
         {
           menu &&
-        <div className="menu_cont scale-up-center">
+        <div className="menu_cont slide-bottom">
             {links.map((link) => (
               <Link to={link.url} key={link.id} className='link span' onClick={()=>setMenu(false)}>
                 <span>{link.name}</span>

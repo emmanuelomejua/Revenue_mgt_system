@@ -1,5 +1,3 @@
-
-
 export interface inputProps {
     id: number,
     title: string,
@@ -15,7 +13,6 @@ export interface linkItems {
     name: string,
     url: string
 }
-
 
 
 

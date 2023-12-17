@@ -47,6 +47,22 @@ function App() {
             path: '/licence',
             element:  <Lincence/>
           },
+          {
+            path: '/licence',
+            element:  <Lincence/>
+          },
+          {
+            path: '/rents',
+            element:  <Lincence/>
+          },
+          {
+            path: '/fees',
+            element:  <Lincence/>
+          },
+          {
+            path: '/others',
+            element:  <Lincence/>
+          },
         ]
       },
       {

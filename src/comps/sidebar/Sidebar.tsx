@@ -2,15 +2,7 @@ import React, { FC } from 'react';
 import { Dashboard, InsertChartOutlinedOutlined, ExitToApp, BarChartOutlined, StackedLineChartOutlined, CheckCircleOutline, Contrast, FilterHdr, Recycling } from '@mui/icons-material'
 import './sidebar.scss'
 import { Link } from 'react-router-dom'
-
-
-interface SidebarItems {
-    id: number;
-    title: string;
-    url: string;
-    icon: React.ReactElement;
-  }
-
+import { SidebarItems } from '../../types/types';
 
 const lists: SidebarItems[] = [
     {

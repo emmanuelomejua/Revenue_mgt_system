@@ -1,3 +1,11 @@
+export interface SidebarItems {
+    id: number;
+    title: string;
+    url: string;
+    icon: React.ReactElement;
+  }
+
+
 export interface inputProps {
     id: number,
     title: string,

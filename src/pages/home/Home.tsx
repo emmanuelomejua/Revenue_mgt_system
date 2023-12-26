@@ -1,7 +1,6 @@
 import './home.scss'
 import Widget from '../../comps/widget/Widget'
-import Piechart from '../../comps/piechart/Piechart'
-import Chart from '../../comps/chart/Chart'
+import Charts from '../../comps/chart/Charts'
 import { FC } from 'react'
 
 const Home:FC = ()=> {
@@ -16,8 +15,7 @@ const Home:FC = ()=> {
         <Widget type='total'/>
         </section>
         <div>
-          <Chart/>
-          <Piechart/>
+          <Charts/>
         </div>
       </section>
     </main>

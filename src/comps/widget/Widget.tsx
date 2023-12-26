@@ -22,31 +22,31 @@ const Widget: FC<WidgetProps> = ({type})=> {
         return {
         title: 'Poll Tax',
         icon: <BarChartOutlined style={{color: 'orange'}}/>,
-        amount: 10000
+        amount: 210000
       };
     case 'yesterday':
       return {
         title: 'Yesterday',
         icon: <ApprovalOutlined style={{color: 'green'}}/>,
-        amount: 12000
+        amount: 312000
       };
      case 'licence':
       return {
         title: 'Licence',
         icon: <CheckCircleOutline style={{color: 'yellow'}}/>,
-        amount: 31000
+        amount: 310000
       };
      case 'month':
        return {
          title: 'Last month',
          icon: <Repartition style={{color: 'purple'}}/>,
-         amount: 62000
+         amount: 262000
         }
         case 'total':
           return {
             title: 'Grand Total',
             icon: <ChatBubble style={{color: '#256'}}/>,
-            amount: 132000
+            amount: 532000
           }
           
           default:

@@ -9,49 +9,49 @@ const lists: SidebarItems[] = [
         id: 0,
         title: 'Home',
         url: '/',
-        icon: <Dashboard/>
+        icon: <Dashboard style={{color: 'orange'}}/>
     },
     {
         id: 2,
         title: 'Poll Tax',
         url: '/polltax',
-        icon: <BarChartOutlined/>
+        icon: <BarChartOutlined style={{color: 'yellowgreen'}}/>
     },
     {
         id: 3,
         title: 'Non-Revenue',
         url: '/nonrevenue',
-        icon: <InsertChartOutlinedOutlined/>
+        icon: <InsertChartOutlinedOutlined style={{color: 'green'}}/>
     },
     {
         id: 4,
         title: 'Licence',
         url: '/licence',
-        icon: <CheckCircleOutline/>
+        icon: <CheckCircleOutline style={{color: 'purple'}}/>
     },
     {
         id: 5,
         title: 'Earnings',
         url: '/earnings',
-        icon: <StackedLineChartOutlined/>
+        icon: <StackedLineChartOutlined style={{color: '#256'}}/>
     },
     {
         id: 6,
         title: 'Rent',
         url: '/rents',
-        icon: <Contrast/>
+        icon: <Contrast style={{color: 'blue'}}/>
     },
     {
         id: 7,
         title: 'Fees',
         url: '/fees',
-        icon: <FilterHdr/>
+        icon: <FilterHdr style={{color: 'red'}}/>
     },
     {
         id: 8,
         title: 'Others',
         url: '/others',
-        icon: <Recycling/>
+        icon: <Recycling style={{color: '#256'}}/>
     },
 
 ]

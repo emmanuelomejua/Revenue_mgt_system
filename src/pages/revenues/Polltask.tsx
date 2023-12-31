@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import './polltask.scss'
+import './styles.scss'
 import Table from '../../comps/table/Table'
 
 const Polltask:FC = () => {

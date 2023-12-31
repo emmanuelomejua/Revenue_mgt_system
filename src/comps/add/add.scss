@@ -1,0 +1,21 @@
+.add{
+    display: flex;
+    margin: 15px;
+    justify-content: space-between;
+    width: 100%;
+
+    span{
+        padding: 10px;
+        font-size: 20px;
+        color: #222;
+    }
+
+    button{
+        padding: 10px;
+        cursor: pointer;
+        border: none;
+        color: white;
+        background-color: #001D3D;
+        border-radius: 5px;
+    }
+}

@@ -4,7 +4,9 @@ import './styles.scss'
 
 const Fees:FC = () => {
   return (
-        <Table/>
+    <section className='styles'>
+    <Table/>
+    </section>
   )
 }
 

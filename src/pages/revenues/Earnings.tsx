@@ -4,7 +4,9 @@ import './styles.scss'
 
 const Earnings:FC = () => {
   return (
-        <Table/>
+    <section className='styles'>
+    <Table/>
+    </section>
   )
 }
 

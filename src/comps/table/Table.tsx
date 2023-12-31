@@ -1,4 +1,4 @@
-import './table.scss'
+import './table.scss';
 import Box from '@mui/material/Box';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { rows } from '../../data';
@@ -6,27 +6,34 @@ import { rows } from '../../data';
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 90 },
   {
-    field: 'title',
-    headerName: 'Title',
+    field: 'fullName',
+    headerName: 'FullName',
+    width: 180,
+    editable: true,
+  },
+  {
+    field: 'phone',
+    headerName: 'Phone',
+    width: 150,
+    editable: true,
+  },
+  {
+    field: 'address',
+    headerName: 'Address',
     width: 140,
     editable: true,
   },
   {
     field: 'amount',
     headerName: 'Amount',
-    width: 90,
-    editable: true,
-  },
-  {
-    field: 'phone',
-    headerName: 'Phone',
     width: 140,
     editable: true,
+    type: 'number'
   },
   {
-    field: 'name',
-    headerName: 'Name',
-    width: 150,
+    field: 'date',
+    headerName: 'Date',
+    width: 140,
     editable: true,
   },
 ];
@@ -41,7 +48,7 @@ export default function DataGridDemo() {
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 8,
+              pageSize: 7,
             },
           },
         }}

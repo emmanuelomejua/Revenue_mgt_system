@@ -4,9 +4,9 @@ import Table from '../../comps/table/Table'
 
 const Polltask:FC = () => {
   return (
-    <div className='polltask'>
+    <section className='styles'>
       <Table/>
-    </div>
+    </section>
   )
 }
 

@@ -4,7 +4,8 @@ import Topbar from './comps/topbar/Topbar';
 import Sidebar from './comps/sidebar/Sidebar';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
-import { Polltask, Lincence } from './pages/revenues/index';
+import { Polltask, Earnings,  Lincence, Fees, NonRevenue, Rent, Others } from './pages/revenues';
+
 
 
 function App() {
@@ -41,27 +42,27 @@ function App() {
           },
           {
             path: '/nonrevenue',
-            element:  <Home/>
+            element:  <NonRevenue/>
           },
           {
             path: '/licence',
             element:  <Lincence/>
           },
           {
-            path: '/licence',
-            element:  <Lincence/>
+            path: '/earnings',
+            element:  <Earnings/>
           },
           {
             path: '/rents',
-            element:  <Lincence/>
+            element:  <Rent/>
           },
           {
             path: '/fees',
-            element:  <Lincence/>
+            element:  <Fees/>
           },
           {
             path: '/others',
-            element:  <Lincence/>
+            element:  <Others/>
           },
         ]
       },

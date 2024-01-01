@@ -1,10 +1,16 @@
 import './add.scss';
 
-function AddRevenue(){
+
+interface revenueProps {
+    tax: string;
+    revenue: string
+}
+
+const AddRevenue:React.FC<revenueProps> = ({tax, revenue}) =>{
     return(
         <section className='add'>
-            <span>Type Of Tax</span>
-            <button>Add Revenue</button>
+            <span>{tax}</span>
+            <button>{revenue}</button>
         </section>
     )
 }

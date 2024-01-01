@@ -6,7 +6,10 @@ import './styles.scss'
 const NonRevenue:FC = () => {
   return (
     <section className='styles'>
-     <AddRevenue/>
+     <AddRevenue
+        tax='NonRevenue Tax'
+        revenue='Add NonRevenue Tax'
+     />
      <Table/>
      </section>
   )

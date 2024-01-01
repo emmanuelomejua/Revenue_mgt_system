@@ -1,16 +1,21 @@
+import { useState } from 'react';
 import './add.scss';
 
 
 interface revenueProps {
     tax: string;
-    revenue: string
+    revenue: string;
+
 }
 
 const AddRevenue:React.FC<revenueProps> = ({tax, revenue}) =>{
+
+    const [open, setOpen] = useState<boolean>(false)
+
     return(
         <section className='add'>
             <span>{tax}</span>
-            <button>{revenue}</button>
+            <button onClick={()=>setOpen(!open)}>{revenue}</button>
         </section>
     )
 }

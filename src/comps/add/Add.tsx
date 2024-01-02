@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, MouseEvent } from 'react';
+import Modal from './Modal';
 import './add.scss';
 
 
 interface revenueProps {
     tax: string;
     revenue: string;
-
 }
 
 const AddRevenue:React.FC<revenueProps> = ({tax, revenue}) =>{
@@ -15,7 +15,9 @@ const AddRevenue:React.FC<revenueProps> = ({tax, revenue}) =>{
     return(
         <section className='add'>
             <span>{tax}</span>
-            <button onClick={()=>setOpen(!open)}>{revenue}</button>
+            <button onClick={(e:MouseEvent<HTMLButtonElement>) => setOpen(!open)}>{revenue}</button>
+
+            {  open && <Modal/>}
         </section>
     )
 }

@@ -70,7 +70,10 @@ const Charts = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{background: 'transparent', border: 'none'}}
+            labelStyle={{display: 'none'}}
+          />
           <Legend />
           <Bar dataKey="amt" fill="#256" activeBar={<Rectangle fill="pink" stroke="blue" />} />
         </BarChart>

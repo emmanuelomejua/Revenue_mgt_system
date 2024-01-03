@@ -22,6 +22,15 @@ export interface linkItems {
     url: string
 }
 
+export interface modalInputProps {
+    id: number,
+    type: string,
+    placeholder?: string,
+    min?: number,
+    minLenght?: number,
+    maxLenght?: number
+}
+
 
 
 

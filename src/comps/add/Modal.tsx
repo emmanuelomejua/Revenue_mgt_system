@@ -1,7 +1,8 @@
 import './add.scss';
 import { Dispatch, SetStateAction } from 'react';
+import { modalInputProps } from '../../types/types'
 
-const inputs = [
+const inputs:modalInputProps[] = [
   {
     id: 0,
     type: 'text',
@@ -39,7 +40,7 @@ const Modal:React.FC<i> = ({setOpen}) => {
   return (
     <div className='modal'>
       <section>
-        <span onClick={()=>setOpen(false)}>ICON</span>
+        <span onClick={()=>setOpen(false)}>Back</span>
 
         <h4>Type of Tax</h4>
         {

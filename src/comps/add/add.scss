@@ -3,6 +3,7 @@
     margin: 15px;
     justify-content: space-between;
     width: 100%;
+    position: relative;
 
     span{
         padding: 10px;
@@ -17,5 +18,46 @@
         color: white;
         background-color: #001D3D;
         border-radius: 5px;
+    }
+
+    .modal{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        section{
+            background-color: #999;
+            display: flex;
+            margin: auto;
+            padding: 20px 140px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 2;
+            border-radius: 10px;
+            margin-top: 50px;
+            position: relative;
+
+            input{
+                outline: none;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                margin-top: 10px;
+            }
+
+            span{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+        }
     }
 }

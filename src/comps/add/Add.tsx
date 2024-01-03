@@ -17,7 +17,7 @@ const AddRevenue:React.FC<revenueProps> = ({tax, revenue}) =>{
             <span>{tax}</span>
             <button onClick={(e:MouseEvent<HTMLButtonElement>) => setOpen(!open)}>{revenue}</button>
 
-            {  open && <Modal/>}
+            {  open && <Modal setOpen={setOpen}/>}
         </section>
     )
 }

@@ -36,12 +36,18 @@ const columns: GridColDef[] = [
     width: 140,
     editable: true,
   },
+  {
+    field: 'type',
+    headerName: 'Type',
+    width: 140,
+    editable: true,
+  },
 ];
 
 
 export default function DataGridDemo() {
   return (
-    <Box sx={{ height: 'max-content', width: '100%' }}>
+    <Box sx={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
         columns={columns}

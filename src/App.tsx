@@ -9,72 +9,75 @@ import { Polltask, Earnings,  Lincence, Fees, NonRevenue, Rent, Others } from '.
 
 
 function App() {
+  
+  const user = true
 
   const Layout = () => {
     return(
-      <section className='app'>
-        <Topbar/>
-        <section  className='app_cont'>
-          <section className='app__sidebar'>
-          <Sidebar/>
+        <section className='app'>
+          <Topbar/>
+          <section  className='app_cont'>
+            <section className='app__sidebar'>
+            <Sidebar/>
+            </section>
+            <section className='app__cont_main'>
+            <Outlet/>
+            </section>
           </section>
-          <section className='app__cont_main'>
-          <Outlet/>
-          </section>
-        </section>
-      </section>
+        </section> 
     )
   }
 
 
   const router = createBrowserRouter([
+
       {
         path: '/',
-        element: <Layout/>,
+        element: user ? <Layout/> : <Login/>,
         children: [
           {
             path: '/',
-            element:  <Home/>
+            element: <Home/> 
           },
           {
             path: '/polltax',
-            element:  <Polltask/>
+            element: <Polltask/> 
           },
           {
             path: '/nonrevenue',
-            element:  <NonRevenue/>
+            element: <NonRevenue/>
           },
           {
             path: '/licence',
-            element:  <Lincence/>
+            element: <Lincence/>
           },
           {
             path: '/earnings',
-            element:  <Earnings/>
+            element: <Earnings/>
           },
           {
             path: '/rents',
-            element:  <Rent/>
+            element: <Rent/>
           },
           {
             path: '/fees',
-            element:  <Fees/>
+            element: <Fees/>
           },
           {
             path: '/others',
-            element:  <Others/>
+            element: <Others/>
           },
         ]
       },
       {
         path: '/login',
-        element: <Login/>
+        element: !user ? <Login/>: <Home/>
       }
   ])
 
 
   return (
-    <main className="App">
+    <main>
       <RouterProvider router={router}/>
     </main>
   );

@@ -4,36 +4,36 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { rows } from '../../data';
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 90 },
+  { field: 'id', headerName: 'ID', width: 50 },
   {
     field: 'fullName',
     headerName: 'FullName',
-    width: 180,
+    width: 160,
     editable: true,
   },
   {
     field: 'phone',
     headerName: 'Phone',
-    width: 150,
+    width: 100,
     editable: true,
   },
   {
     field: 'address',
     headerName: 'Address',
-    width: 140,
+    width: 120,
     editable: true,
   },
   {
     field: 'amount',
     headerName: 'Amount',
-    width: 140,
+    width: 60,
     editable: true,
     type: 'number'
   },
   {
     field: 'date',
     headerName: 'Date',
-    width: 140,
+    width: 60,
     editable: true,
   },
   {

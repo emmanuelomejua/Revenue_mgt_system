@@ -1,24 +1,22 @@
-
-export const getNonRevenueTax = () => ({
-    type: 'GET_NONREVENUETAX'
+export const getFeesStart = () => ({
+    type: 'GET_FEES_START'
 })
 
-export const getLicenceTax = () => ({
-    type: 'GET_LICENCETAX'
+export const getFeesSuccess = () => ({
+    type: 'GET_FEES_SUCCESS'
 })
 
-export const getEarning = () => ({
-    type: 'GET_EARNINGTAX'
+export const getFeesFail = () => ({
+    type: 'GET_FEES_FAIL'
 })
 
-export const getRentTax = () => ({
-    type: 'GET_RENT_TAX'
+//create
+export const createFeesStart = () => ({
+    type: 'CREATE_FEES_START'
 })
-
-export const getFees = () => ({
-    type: 'GET_FEE_TAX'
+export const createFeesSuccess = () => ({
+    type: 'CREATE_FEES_SUCESS'
 })
-
-export const getOthers = () => ({
-    type: 'GET_OTHER_TAX'
+export const createFeesFail = () => ({
+    type: 'CREATE_FEES_FAIL'
 })

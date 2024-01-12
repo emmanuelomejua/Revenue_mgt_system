@@ -12,11 +12,11 @@ export const getPollTaxFail = () => ({
 
 //create
 export const createPollTaxStart = () => ({
-    type: 'GET_POLLTAX_START'
+    type: 'CREATE_POLLTAX_START'
 })
 export const createPollTaxSuccess = () => ({
-    type: 'GET_POLLTAX_SUCESS'
+    type: 'CREATE_POLLTAX_SUCESS'
 })
 export const createPollTaxFail = () => ({
-    type: 'GET_POLLTAX_FAIL'
+    type: 'CREATE_POLLTAX_FAIL'
 })

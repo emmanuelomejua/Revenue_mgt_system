@@ -20,10 +20,7 @@ const INITIAL_STATE: PolltaxContextProps = {
     dispatch: () => {}
 }
 
-export const PolltaxContext = createContext<PolltaxContextProps>({
-    ...INITIAL_STATE,
-    dispatch: () => {},
-  });
+export const PolltaxContext = createContext<PolltaxContextProps>(INITIAL_STATE);
 
 const PolltaxContextProvider: FC<PolltaxContextProviderProps> = ({ children }) => {
     const [state, dispatch] = useReducer(polltaxReducer, INITIAL_STATE);

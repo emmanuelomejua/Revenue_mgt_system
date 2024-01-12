@@ -1,27 +1,28 @@
-export const getPollTax = () => ({
-    type: 'GET_POLLTAX'
-})
+import { createContext, useReducer } from "react"
+import polltaxReducer from "./polltaxReducer"
 
-export const getNonRevenueTax = () => ({
-    type: 'GET_NONREVENUETAX'
-})
 
-export const getLicenceTax = () => ({
-    type: 'GET_LICENCETAX'
-})
+const INITIAL_STATE = {
+    polltax: [],
+    loading: false,
+    error: false
+}
 
-export const getEarning = () => ({
-    type: 'GET_EARNINGTAX'
-})
+export const PolltaxContext = createContext(INITIAL_STATE)
 
-export const getRentTax = () => ({
-    type: 'GET_RENT_TAX'
-})
+export const PolltaxContextProvider = ({children}: any) => {
 
-export const getFees = () => ({
-    type: 'GET_FEE_TAX'
-})
+    const [state, dispatch] = useReducer(polltaxReducer, INITIAL_STATE)
 
-export const getOthers = () => ({
-    type: 'GET_OTHER_TAX'
-})
+    return(
+        <PolltaxContext.Provider value={{
+            polltax: state.polltax,
+            loading: state.loading,
+            error: state.error,
+            dispatch
+        }}>
+            {children}
+        </PolltaxContext.Provider>
+    )
+
+}

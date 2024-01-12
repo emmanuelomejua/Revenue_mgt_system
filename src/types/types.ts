@@ -31,20 +31,3 @@ export interface modalInputProps {
     maxLenght?: number
 }
 
-
-
-
-
-
-// useEffect(() => {
-
-//     const handleWindowLoad = () => {
-
-//       setMenu(false);
-//     };
-
-//     window.addEventListener('load', handleWindowLoad);
-//     return () => {
-//       window.removeEventListener('load', handleWindowLoad);
-//     };
-//   }, []);

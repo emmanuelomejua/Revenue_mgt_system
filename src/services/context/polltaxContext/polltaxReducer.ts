@@ -1,16 +1,16 @@
-interface polltaxStateType {
+export interface polltaxStateType {
     polltax: any,
     loading: boolean,
     error: boolean,
 }
 
-interface polltaxActionType {
+export interface polltaxActionType {
     type: 'GET_POLLTAX_START' | 'CREATE_POLLTAX_SUCCESS' | 'GET_POLLTAX_FAIL' | 'CREATE_POLLTAX_START' | 'GET_POLLTAX_SUCCESS' | 'CREATE_POLLTAX_FAIL' 
     payload: any
 }
 
 
-const polltaxReducer = (state: polltaxStateType, action: polltaxActionType) => {
+const polltaxReducer = (state: polltaxStateType, action: polltaxActionType): any => {
     switch (action.type) {
         case 'CREATE_POLLTAX_START':
             return{

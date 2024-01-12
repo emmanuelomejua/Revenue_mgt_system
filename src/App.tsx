@@ -10,7 +10,8 @@ import { Polltask, Earnings,  Lincence, Fees, NonRevenue, Rent, Others } from '.
 
 function App() {
   
-  const user = true
+  const userString = localStorage.getItem('user');
+  const user = userString ? JSON.parse(userString) : null;
 
   const Layout = () => {
     return(

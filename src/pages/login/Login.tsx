@@ -1,22 +1,30 @@
 import { useState } from 'react'
 import './login.scss'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
 
+  const navigate = useNavigate()
+
   const handleLogin = async (e:any) => {
     e.preventDefault()
 
     try {
-      
+      const res = await axios.post('http://localhost:8800/api/auth/login', {
+        email,
+        password
+      })
+      localStorage.setItem('user', JSON.stringify(res.data))
+      navigate('/')
     } catch (error) {
-      
+      console.log(error)
     }
   }
 
-  console.log(email, password)
 
   return (
     <div className='login'>

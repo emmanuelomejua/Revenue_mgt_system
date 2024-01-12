@@ -1,12 +1,12 @@
 import { createContext, useReducer, ReactNode, FC, Dispatch } from "react"
-import polltaxReducer, { polltaxActionType, polltaxStateType } from "./polltaxReducer"
+import polltaxReducer, { polltaxActionType } from "./polltaxReducer"
 
 
 interface PolltaxContextProps {
     polltax: any[]; 
     loading: boolean;
     error: boolean;
-    dispatch?: Dispatch<polltaxActionType> // 
+    dispatch?: Dispatch<polltaxActionType> 
   }
 
 interface PolltaxContextProviderProps {
@@ -17,7 +17,6 @@ const INITIAL_STATE: PolltaxContextProps = {
     polltax: [],
     loading: false,
     error: false,
-    dispatch: () => {}
 }
 
 export const PolltaxContext = createContext<PolltaxContextProps>(INITIAL_STATE);
@@ -33,3 +32,4 @@ const PolltaxContextProvider: FC<PolltaxContextProviderProps> = ({ children }) =
   };
 
   export default PolltaxContextProvider
+  

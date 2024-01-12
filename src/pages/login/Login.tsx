@@ -7,6 +7,7 @@ const Login = () => {
 
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
+  const [error, setError] = useState<boolean>(false)
 
   const navigate = useNavigate()
 
@@ -21,7 +22,7 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(res.data))
       navigate('/')
     } catch (error) {
-      console.log(error)
+        setError(true)
     }
   }
 
@@ -48,7 +49,7 @@ const Login = () => {
           required min={8} 
         />
         <button type='submit'>Login</button>
-        {/* {error && <span>Please Enter a valid username and password</span>} */}
+        {error && <span>Please Enter a valid username and password</span>}
       </form>
     </div>
   )

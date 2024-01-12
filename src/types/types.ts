@@ -25,6 +25,7 @@ export interface linkItems {
 export interface modalInputProps {
     id: number,
     type: string,
+    name: string,
     placeholder?: string,
     min?: number,
     minLenght?: number,

@@ -1,5 +1,5 @@
 import './add.scss';
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 import { modalInputProps } from '../../types/types'
 
 const inputs:modalInputProps[] = [
@@ -7,7 +7,7 @@ const inputs:modalInputProps[] = [
     id: 0,
     type: 'text',
     placeholder: 'FullName',
-    name: ''
+    name: 'fullName'
   },
   {
     id: 1,
@@ -15,57 +15,42 @@ const inputs:modalInputProps[] = [
     placeholder: 'Phone',
     minLenght: 11,
     maxLenght: 11,
-    name: ''
+    name: 'phone'
   },
   {
     id: 2,
     type: 'text',
     placeholder: 'Address',
-    name: ''
+    name: 'address'
   },
   {
     id: 3,
     type: 'number',
     placeholder: 'Amount',
     min: 0,
-    name: ''
+    name: 'amount'
   },
   {
     id: 4,
-    type: 'date',
-    name: ''
+    type: 'text',
+    placeholder: 'Type of Tax',
+    name: 'typeOfTax'
   },
   {
     id: 5,
-    type: 'text',
-    placeholder: 'Type of Tax',
-    name: ''
+    type: 'date',
+    name: 'date'
   },
 ]
 
 interface i {
   setOpen: Dispatch<SetStateAction<boolean>>;
-  onchange: any;
-  onSubmit: any
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
-const Modal:React.FC<i> = ({setOpen, onSubmit, onchange}) => {
+const Modal:React.FC<i> = ({setOpen, onSubmit, onChange}) => {
 
-  const [revenueDetails, setRevenueDetails] = useState({
-    fullName: '',
-    phone: '',
-    amount: '',
-    date: '',
-    typeOfTax: ''
-  })
-
-  const handleChange = () => {
-
-  }
-
-  const handleSubmit = (e:any) => {
-
-  }
 
   return (
     <form className='modal' onSubmit={onSubmit}>
@@ -81,7 +66,7 @@ const Modal:React.FC<i> = ({setOpen, onSubmit, onchange}) => {
               key={input.id} 
               min={input?.min} required
               name={input.name}
-              onChange={onchange}
+              onChange={onChange}
             />
           ))
         }

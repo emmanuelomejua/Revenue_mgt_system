@@ -1,5 +1,5 @@
 import './chart.scss'
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Rectangle, XAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
   {
@@ -35,7 +35,7 @@ const data = [
     amt: 2100,
   },
   {
-    tax: 4300,
+    name: 'Sept',
     amt: 2100,
   },
   {
@@ -55,10 +55,8 @@ const data = [
 const Charts = () => {
   return (
     <section className='chart'>
-      <ResponsiveContainer width={750} aspect={2/1}>
+      <ResponsiveContainer width='100%' height='100%'>
         <BarChart
-          width={500}
-          height={300}
           data={data}
           margin={{
             top: 5,
@@ -69,7 +67,6 @@ const Charts = () => {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
-          <YAxis />
           <Tooltip
             contentStyle={{background: 'transparent', border: 'none'}}
             labelStyle={{display: 'none'}}

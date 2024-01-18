@@ -2,21 +2,25 @@ export const getOthersStart = () => ({
     type: 'GET_OTHERS_START'
 })
 
-export const getOthersSuccess = () => ({
-    type: 'GET_OTHERS_SUCCESS'
+export const getOthersSuccess = (others:any) => ({
+    type: 'GET_OTHERS_SUCCESS',
+    payload: others
 })
 
-export const getOthersFail = () => ({
-    type: 'GET_OTHERS_FAIL'
+export const getOthersFail = (error: any) => ({
+    type: 'GET_OTHERS_FAIL',
+    payload: error
 })
 
 //create
 export const createOthersStart = () => ({
     type: 'CREATE_OTHERS_START'
 })
-export const createOthersSuccess = () => ({
-    type: 'CREATE_OTHERS_SUCESS'
+export const createOthersSuccess = (others:any) => ({
+    type: 'CREATE_OTHERS_SUCESS',
+    payload: others
 })
-export const createOthersFail = () => ({
-    type: 'CREATE_OTHERS_FAIL'
+export const createOthersFail = (error: any) => ({
+    type: 'CREATE_OTHERS_FAIL',
+    payload: error
 })

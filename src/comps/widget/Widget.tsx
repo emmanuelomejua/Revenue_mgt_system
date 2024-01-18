@@ -1,19 +1,18 @@
 import './widget.scss'
 import { FC } from 'react'
+import { WidgetProps, WidgetDetails } from '../../types/types'
 import { ChatBubble, ApprovalOutlined, BarChartOutlined, CheckCircleOutline, Repartition } from '@mui/icons-material'
+import { baseUrl } from '../../services/utils/url'
+import { useAmount } from '../../services/utils/hook';
 
-interface WidgetDetails {
-  title: string;
-  icon: React.ReactElement;
-  amount: number;
-}
-
-interface WidgetProps {
-  type: 'polltax' | 'yesterday' | 'licence' | 'month' | 'total';
-}
 
 
 const Widget: FC<WidgetProps> = ({type})=> {
+
+  const totalPolltax = useAmount(baseUrl + 'polltax/amount')
+  const totalEarning =   useAmount(baseUrl + 'earning/amount')
+  const totalRents = useAmount(baseUrl + 'fees/amount')
+ 
   
   const getWidgetDetails = (): WidgetDetails => {
 
@@ -22,37 +21,37 @@ const Widget: FC<WidgetProps> = ({type})=> {
         return {
         title: 'Poll Tax',
         icon: <BarChartOutlined style={{color: 'orange'}}/>,
-        amount: 210000
+        amount: totalPolltax.amount
       };
-    case 'yesterday':
-      return {
-        title: 'Yesterday',
-        icon: <ApprovalOutlined style={{color: 'green'}}/>,
-        amount: 312000
+      case 'rent':
+        return {
+          title: 'Fees',
+          icon: <ApprovalOutlined style={{color: 'green'}}/>,
+          amount: totalRents.amount
       };
-     case 'licence':
-      return {
-        title: 'Licence',
-        icon: <CheckCircleOutline style={{color: 'yellow'}}/>,
-        amount: 310000
-      };
-     case 'month':
-       return {
-         title: 'Last month',
-         icon: <Repartition style={{color: 'purple'}}/>,
-         amount: 262000
-        }
-        case 'total':
-          return {
-            title: 'Grand Total',
-            icon: <ChatBubble style={{color: '#256'}}/>,
-            amount: 532000
+      case 'earnings':
+        return {
+          title: 'Earnings',
+          icon: <CheckCircleOutline style={{color: 'yellow'}}/>,
+          amount: totalEarning.amount
+        };
+      case 'month':
+        return {
+          title: 'Last month',
+          icon: <Repartition style={{color: 'purple'}}/>,
+          amount: 262000
           }
-          
-          default:
-            throw new Error('Invalid widget type');
-          }
+      case 'total':
+        return {
+          title: 'Grand Total',
+          icon: <ChatBubble style={{color: '#256'}}/>,
+          amount: 532000
         }
+      
+      default:
+        throw new Error();
+      }
+    }
   
         const details: WidgetDetails = getWidgetDetails();
 

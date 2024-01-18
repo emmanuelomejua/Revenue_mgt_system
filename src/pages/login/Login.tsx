@@ -1,31 +1,20 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './login.scss'
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { loginUser } from '../../services/context/auth/apiCall'
+import { AuthContext } from '../../services/context/auth/authContext'
 
 const Login = () => {
 
+  const { dispatch, error, loading} = useContext(AuthContext)
+
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
-  const [error, setError] = useState<boolean>(false)
 
-  const navigate = useNavigate()
 
-  const handleLogin = async (e:any) => {
+  const handleLogin = (e:any) => {
     e.preventDefault()
-
-    try {
-      const res = await axios.post('http://localhost:8800/api/auth/login', {
-        email,
-        password
-      })
-      localStorage.setItem('user', JSON.stringify(res.data))
-      navigate('/')
-    } catch (error) {
-        setError(true)
-    }
+    loginUser({email, password}, dispatch)
   }
-
 
   return (
     <div className='login'>
@@ -48,8 +37,8 @@ const Login = () => {
           onChange={(e)=>setPassword(e.target.value)} 
           required min={8} 
         />
-        <button type='submit'>Login</button>
-        {error && <span>Please Enter a valid username and password</span>}
+        <button type='submit' disabled={loading}>Login</button>
+        {error && <span className='err'>Please Enter a valid username and password</span>}
       </form>
     </div>
   )

@@ -1,8 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import { Dashboard, InsertChartOutlinedOutlined, ExitToApp, BarChartOutlined, StackedLineChartOutlined, CheckCircleOutline, Contrast, FilterHdr, Recycling } from '@mui/icons-material'
 import './sidebar.scss'
 import { Link } from 'react-router-dom'
 import { SidebarItems } from '../../types/types';
+import { AuthContext } from '../../services/context/auth/authContext';
+import { logoutUser } from '../../services/context/auth/apiCall';
 
 const lists: SidebarItems[] = [
     {
@@ -57,6 +59,13 @@ const lists: SidebarItems[] = [
 ]
 
 const Sidebar: FC = () => {
+
+    const { dispatch } = useContext(AuthContext)
+
+    const Logout = () => {
+        logoutUser(dispatch)
+    }
+
   return (
     <section className='sidebar'>
         <ul>
@@ -72,7 +81,7 @@ const Sidebar: FC = () => {
         </ul>
         <div>
             <span><ExitToApp/></span>
-            <span>Logout</span>
+            <span onClick={Logout}>Logout</span>
         </div>
     
     </section>
